@@ -15,6 +15,7 @@
 		FC17290626F2E23E00843F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC17290426F2E23E00843F42 /* LaunchScreen.storyboard */; };
 		FC17291126F2E23F00843F42 /* UISliderCustomColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17291026F2E23F00843F42 /* UISliderCustomColorsTests.swift */; };
 		FC17291C26F2E23F00843F42 /* UISliderCustomColorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17291B26F2E23F00843F42 /* UISliderCustomColorsUITests.swift */; };
+		FC17292B26F30D4400843F42 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17292A26F30D4400843F42 /* Slider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FC17291726F2E23F00843F42 /* UISliderCustomColorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UISliderCustomColorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC17291B26F2E23F00843F42 /* UISliderCustomColorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderCustomColorsUITests.swift; sourceTree = "<group>"; };
 		FC17291D26F2E23F00843F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC17292A26F30D4400843F42 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,8 @@
 		FC1728F826F2E23600843F42 /* UISliderCustomColors */ = {
 			isa = PBXGroup;
 			children = (
+				FC9B2DCA26F44048003176BE /* Extensions */,
+				FC17292926F30D3100843F42 /* View */,
 				FC1728F926F2E23600843F42 /* AppDelegate.swift */,
 				FC1728FB26F2E23600843F42 /* SceneDelegate.swift */,
 				FC1728FD26F2E23600843F42 /* ViewController.swift */,
@@ -126,6 +130,21 @@
 				FC17291D26F2E23F00843F42 /* Info.plist */,
 			);
 			path = UISliderCustomColorsUITests;
+			sourceTree = "<group>";
+		};
+		FC17292926F30D3100843F42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC17292A26F30D4400843F42 /* Slider.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC9B2DCA26F44048003176BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 			files = (
 				FC1728FE26F2E23600843F42 /* ViewController.swift in Sources */,
 				FC1728FA26F2E23600843F42 /* AppDelegate.swift in Sources */,
+				FC17292B26F30D4400843F42 /* Slider.swift in Sources */,
 				FC1728FC26F2E23600843F42 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UISliderCustomColors/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UISliderCustomColors/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
