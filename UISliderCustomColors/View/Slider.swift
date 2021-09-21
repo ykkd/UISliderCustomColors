@@ -50,10 +50,6 @@ final class BufferingSlider: UISlider {
 
     var sliderHeight: Double = 8.0 {
         didSet {
-            // FIXME: 8.0を超えるサイズが必要な場合は、sliderRectだけでなく、thumbRectも再計算が必要
-            if sliderHeight > 8.0 {
-                sliderHeight = 8.0
-            }
             if sliderHeight < 1 {
                 sliderHeight = 1
             }
@@ -69,6 +65,8 @@ final class BufferingSlider: UISlider {
 
     override func trackRect(forBounds bounds: CGRect) -> CGRect {
         var result = super.trackRect(forBounds: bounds)
+        let heightDiff = CGFloat(sliderHeight) - result.height
+        result.origin.y += (heightDiff * 0.5) * -1.0
         result.size.height = CGFloat(sliderHeight)
         return result
     }
@@ -136,7 +134,12 @@ extension BufferingSlider {
         self.bufferColor = bufferColor
         self.setThumbImage(thumbImage, for: .normal)
         self.setThumbImage(thumbImage, for: .highlighted)
-
+        
+        if let thumbImage = currentThumbImage,
+           sliderHeight > Double(thumbImage.size.height * 0.5)
+            {
+            sliderHeight = Double(thumbImage.size.height * 0.5)
+        }
         bufferStartValue = .zero
         bufferEndValue = .zero
         value = .zero
